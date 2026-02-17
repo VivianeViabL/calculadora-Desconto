@@ -4,38 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
-    <script src="scripts/exercicio3.js"></script>
-</head>
-<body>
-    <section>
-        <label for="valor">Valor Original(R$): </label>
-        <input type="number" id="valor" >
-
-        <label for="desconto">Desconto(R$): </label>
-        <input type="number" id="desconto" >
-        
-        <p id="resultado"></p>
-
-        <button onclick="calculadoraDesconto()">Calcular</button> <!-- onClick: ao clicar no botão, chama a função "calcularDesconto" -->
-    </section>
-
-<style>
+    <style>
   body {
     font-family: Arial, sans-serif;
-    background-color: #fdeaee;
+    background-color: #eafdfc;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
   }
 
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color:rgb(0, 88, 59);
+  }
 
-  section {
+  .container {
     display: flex;
     flex-direction: column; 
     /* font-weight: bold; */
     gap: 10px;                /* espaço entre eles */
     width: 250px;
+
   }
 
   input, select, textarea {
@@ -61,6 +50,23 @@
     background-color: #367c5f;
   }
 </style>
+<script src="exercicio3.js"></script>
+
+</head>
+
+<body>
+    <header class="container">
+        <p><h1>Calculadora de Desconto</h1></p>
+        <label for="valor">Valor Original(R$): </label>
+        <input type="number" id="valor">
+
+        <label for="desconto">Desconto(R$): </label>
+        <input type="number" id="desconto">
+        
+        <p id="resultado"></p>
+
+        <button onclick="calculadoraDesconto()">Calcular</button> <!-- onClick: ao clicar no botão, chama a função "calcularDesconto" -->
+    </header>
 
 </body>
 </html>
